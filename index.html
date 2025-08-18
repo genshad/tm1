@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>ГлобалТаможня — Растаможка товаров в РФ</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f7f9fc;
+            color: #333;
+            line-height: 1.7;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            text-align: center;
+            padding: 70px 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+        }
+        header h1 {
+            font-size: 2.6em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        section {
+            background: white;
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+        h2 {
+            color: #1e3c72;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: 600;
+        }
+        ul {
+            list-style: none;
+        }
+        ul li {
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+        ul li::before {
+            content: "✓";
+            color: #27ae60;
+            font-weight: bold;
+            margin-right: 10px;
+            background: #e8f5e8;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+        }
+        .highlight {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            font-weight: 500;
+            color: #1565c0;
+            text-align: center;
+        }
+        .contact-info {
+            text-align: center;
+            font-size: 1.1em;
+        }
+        .contact-info p {
+            margin: 10px 0;
+            font-size: 1.1em;
+        }
+        .btn {
+            display: inline-block;
+            background: #1e3c72;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 6px;
+            margin: 10px 5px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #0d264d;
+        }
+        .btn-whatsapp {
+            background: #25D366;
+        }
+        .btn-whatsapp:hover {
+            background: #1da856;
+        }
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #666;
+            font-size: 0.95em;
+            margin-top: 30px;
+            border-top: 1px solid #eee;
+        }
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2.1em;
+            }
+            header p {
+                font-size: 1em;
+            }
+            .btn {
+                display: block;
+                margin: 10px auto;
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>ГлобалТаможня</h1>
+            <p>Профессиональная растаможка товаров в России. Быстро, прозрачно, без лишних хлопот.</p>
+        </header>
+
+        <section>
+            <h2>Наши услуги</h2>
+            <ul>
+                <li>Растаможка импортных товаров (ЕАЭС, РФ)</li>
+                <li>Таможенное оформление для ИП и юрлиц</li>
+                <li>Расчёт пошлин, НДС, акцизов</li>
+                <li>Оформление сертификатов и деклараций</li>
+                <li>Сопровождение на всех этапах</li>
+                <li>Экспресс-оформление — от 24 часов</li>
+            </ul>
+            <div class="highlight">
+                Консультация бесплатно! Поможем сэкономить до 30% на платежах.
+            </div>
+        </section>
+
+        <section>
+            <h2>Почему клиенты выбирают нас?</h2>
+            <ul>
+                <li>Опыт более 10 лет на рынке логистики</li>
+                <li>Работаем с любыми категориями товаров</li>
+                <li>Прозрачная калькуляция стоимости</li>
+                <li>Официальное оформление, без "серых" схем</li>
+                <li>Поддержка 24/7 на этапе оформления</li>
+                <li>Сотрудничаем с крупными таможенными постами</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Контакты</h2>
+            <div class="contact-info">
+                <p>📞 <strong>Телефон:</strong> +7 (495) 987-65-43</p>
+                <p>📧 <strong>Email:</strong> info@globaltam.ru</p>
+                <p>🏢 <strong>Офис:</strong> г. Москва, Волоколамское ш., д. 98</p>
+                <p>🕒 <strong>Режим работы:</strong> Пн–Пт: 9:00–18:00</p>
+                <p>🌐 <strong>ИНН:</strong> 7712345678 | <strong>ОГРН:</strong> 1234567890123</p>
+
+                <a href="tel:+74959876543" class="btn">Позвонить</a>
+                <a href="https://wa.me/74959876543" target="_blank" class="btn btn-whatsapp">Написать в WhatsApp</a>
+                <a href="mailto:info@globaltam.ru" class="btn" style="background: #9b59b6;">Написать на email</a>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        &copy; 2025 ГлобалТаможня. Все права защищены.<br>
+        Официальный партнёр крупных логистических операторов. Лицензия № ТМ-1123.
+    </footer>
+
+</body>
+</html>
