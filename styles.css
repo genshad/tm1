@@ -1,0 +1,159 @@
+/* GlobalTaможня Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f7f9fc;
+    color: #333;
+    line-height: 1.7;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    text-align: center;
+    padding: 70px 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+header h1 {
+    font-size: 2.6em;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+header p {
+    font-size: 1.2em;
+    opacity: 0.9;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+main section {
+    background: white;
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+h2 {
+    color: #1e3c72;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+}
+
+ul li::before {
+    content: "✓";
+    color: #27ae60;
+    font-weight: bold;
+    margin-right: 10px;
+    background: #e8f5e8;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.highlight {
+    background: #e3f2fd;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 15px 0;
+    font-weight: 500;
+    color: #1565c0;
+    text-align: center;
+}
+
+.contact-info {
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.contact-info p {
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+.btn {
+    display: inline-block;
+    background: #1e3c72;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 6px;
+    margin: 10px 5px;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #0d264d;
+}
+
+.btn-whatsapp {
+    background: #25D366;
+}
+
+.btn-whatsapp:hover {
+    background: #1da856;
+}
+
+.btn-email {
+    background: #9b59b6;
+}
+
+.btn-email:hover {
+    background: #8e44ad;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #666;
+    font-size: 0.95em;
+    margin-top: 30px;
+    border-top: 1px solid #eee;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2.1em;
+    }
+    header p {
+        font-size: 1em;
+    }
+    .btn {
+        display: block;
+        margin: 10px auto;
+        width: 80%;
+    }
+}
