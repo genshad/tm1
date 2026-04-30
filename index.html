@@ -1,134 +1,142 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>ГлобалТаможня — Растаможка товаров в РФ</title>
-    <meta name="description" content="Профессиональная растаможка товаров в РФ. Расчёт пошлин, оформление сертификатов от 24 часов."/>
-    <link rel="stylesheet" href="styles.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Glass Flow</title>
+    <style>
+        :root {
+            --bg: #0f172a; --text: #f8fafc; --primary: #38bdf8;
+            --glass: rgba(255, 255, 255, 0.05); --border: rgba(255, 255, 255, 0.1);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+        body {
+            font-family: system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text);
+            overflow-x: hidden; line-height: 1.6; min-height: 100vh; position: relative;
+        }
+        .blob {
+            position: fixed; border-radius: 50%; filter: blur(80px); opacity: 0.6; z-index: -1;
+            animation: float 10s infinite ease-in-out;
+        }
+        .b1 { top: -10%; left: -10%; width: 50vw; height: 50vw; background: #7c3aed; }
+        .b2 { bottom: -10%; right: -10%; width: 40vw; height: 40vw; background: #2563eb; animation-delay: -5s; }
+        @keyframes float { 0%, 100% { transform: translate(0, 0); } 50% { transform: translate(30px, 50px); } }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        nav {
+            position: fixed; top: 0; width: 100%; padding: 15px 0; z-index: 100;
+            backdrop-filter: blur(10px); background: rgba(15, 23, 42, 0.7); border-bottom: 1px solid var(--border);
+        }
+        .nav-inner { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary); text-decoration: none; }
+        .menu a { color: var(--text); text-decoration: none; margin-left: 20px; opacity: 0.8; transition: 0.3s; }
+        .menu a:hover { opacity: 1; color: var(--primary); }
+        section { padding: 100px 0; min-height: 80vh; display: flex; align-items: center; }
+        h1, h2 { font-size: clamp(2rem, 5vw, 4rem); margin-bottom: 20px; line-height: 1.1; }
+        h1 span { color: var(--primary); }
+        p { font-size: 1.1rem; opacity: 0.9; max-width: 600px; margin-bottom: 30px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; width: 100%; }
+        .card {
+            background: var(--glass); border: 1px solid var(--border); padding: 30px; border-radius: 20px;
+            backdrop-filter: blur(10px); transition: transform 0.3s, box-shadow 0.3s;
+            transform-style: preserve-3d; perspective: 1000px;
+        }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+        .card h3 { margin-bottom: 10px; color: var(--primary); }
+        form { display: flex; flex-direction: column; gap: 15px; max-width: 400px; width: 100%; }
+        input, textarea {
+            padding: 15px; border-radius: 10px; border: 1px solid var(--border);
+            background: rgba(255,255,255,0.03); color: white; font-family: inherit;
+        }
+        input:focus, textarea:focus { outline: none; border-color: var(--primary); }
+        button {
+            padding: 15px 30px; border: none; border-radius: 10px; background: var(--primary);
+            color: #000; font-weight: bold; cursor: pointer; transition: 0.3s;
+        }
+        button:hover { transform: scale(1.05); box-shadow: 0 0 20px var(--primary); }
+        .reveal { opacity: 0; transform: translateY(30px); transition: 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        #up {
+            position: fixed; bottom: 30px; right: 30px; width: 50px; height: 50px;
+            background: var(--glass); border: 1px solid var(--border); border-radius: 50%;
+            color: white; cursor: pointer; display: flex; align-items: center; justify-content: center;
+            opacity: 0; pointer-events: none; transition: 0.3s; backdrop-filter: blur(5px);
+        }
+        #up.show { opacity: 1; pointer-events: all; }
+        #up:hover { background: var(--primary); color: #000; }
+        @media (max-width: 768px) {
+            .menu { display: none; }
+            section { padding: 60px 0; }
+        }
+    </style>
 </head>
 <body>
-    <!-- Animated Background -->
-    <div class="bg-gradient"></div>
-    <div class="bg-blob blob-1"></div>
-    <div class="bg-blob blob-2"></div>
-    <div class="bg-blob blob-3"></div>
-
-    <div class="container">
-        <header class="glass-card fade-in">
-            <h1>ГлобалТаможня</h1>
-            <p>Профессиональная растаможка товаров в России. Быстро, прозрачно, без лишних хлопот.</p>
-        </header>
-
-        <nav class="glass-card fade-in">
-            <ul class="nav-menu">
-                <li><a href="#services">Услуги</a></li>
-                <li><a href="#benefits">Преимущества</a></li>
-                <li><a href="#contacts">Контакты</a></li>
-            </ul>
-        </nav>
-
-        <main>
-        <section id="services" class="glass-card reveal">
-            <h2>Наши услуги</h2>
-            <ul class="service-list">
-                <li class="service-item">Растаможка импортных товаров (ЕАЭС, РФ)</li>
-                <li class="service-item">Таможенное оформление для ИП и юрлиц</li>
-                <li class="service-item">Расчёт пошлин, НДС, акцизов</li>
-                <li class="service-item">Оформление сертификатов и деклараций</li>
-                <li class="service-item">Сопровождение на всех этапах</li>
-                <li class="service-item highlight-item">🎁 Экспресс-оформление — от 24 часов</li>
-            </ul>
-            <div class="highlight-badge">Консультация бесплатно! Экономия до 30%</div>
-        </section>
-
-        <section id="benefits" class="glass-card reveal">
-            <h2>Почему выбирают нас?</h2>
-            <div class="benefits-grid">
-                <div class="benefit-card tilt-card">
-                    <span class="benefit-icon">🏆</span>
-                    <h3>10+ лет</h3>
-                    <p>Опыт работы</p>
-                </div>
-                <div class="benefit-card tilt-card">
-                    <span class="benefit-icon">📦</span>
-                    <h3>Все категории</h3>
-                    <p>Любые товары</p>
-                </div>
-                <div class="benefit-card tilt-card">
-                    <span class="benefit-icon">💎</span>
-                    <h3>Прозрачно</h3>
-                    <p>Без скрытых платежей</p>
-                </div>
-                <div class="benefit-card tilt-card">
-                    <span class="benefit-icon">📄</span>
-                    <h3>Официально</h3>
-                    <p>Полный пакет документов</p>
-                </div>
-                <div class="benefit-card tilt-card">
-                    <span class="benefit-icon">🕐</span>
-                    <h3>24/7</h3>
-                    <p>Поддержка клиентов</p>
-                </div>
+    <div class="blob b1"></div><div class="blob b2"></div>
+    <nav>
+        <div class="container nav-inner">
+            <a href="#" class="logo">GlassFlow</a>
+            <div class="menu">
+                <a href="#about">О нас</a>
+                <a href="#features">Преимущества</a>
+                <a href="#contact">Контакты</a>
+            </div>
+        </div>
+    </nav>
+    <main class="container">
+        <section id="home">
+            <div class="reveal">
+                <h1>Будущее <span>Веб-Дизайна</span></h1>
+                <p>Современные решения с эффектом стекла, плавными анимациями и адаптивностью.</p>
+                <button onclick="document.getElementById('contact').scrollIntoView()">Начать проект</button>
             </div>
         </section>
-
-        <section id="contacts" class="glass-card reveal">
-            <h2>Контакты</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <span class="contact-icon">📞</span>
-                        <a href="tel:+74959876543">+7 (495) 987-65-43</a>
-                    </div>
-                    <div class="contact-item">
-                        <span class="contact-icon">📧</span>
-                        <a href="mailto:info@globaltam.ru">info@globaltam.ru</a>
-                    </div>
-                    <div class="contact-item">
-                        <span class="contact-icon">🏢</span>
-                        <span>г. Москва, Волоколамское ш., д. 98</span>
-                    </div>
-                    <div class="contact-item">
-                        <span class="contact-icon">🕒</span>
-                        <span>Пн–Пт: 9:00–18:00</span>
-                    </div>
-                    <div class="btn-container">
-                        <a href="tel:+74959876543" class="btn btn-primary pulse">📞 Позвонить</a>
-                        <a href="https://wa.me/74959876543" target="_blank" class="btn btn-whatsapp pulse">💬 WhatsApp</a>
-                        <a href="mailto:info@globaltam.ru" class="btn btn-email pulse">✉️ Email</a>
-                    </div>
-                </div>
-                
-                <div class="contact-form-wrapper">
-                    <h3>Заказать обратный звонок</h3>
-                    <form id="contactForm" novalidate>
-                        <div class="form-group">
-                            <label for="name">Имя</label>
-                            <input type="text" id="name" required placeholder="Иван Иванов"/>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Телефон</label>
-                            <input type="tel" id="phone" required placeholder="+7 (___) ___-__-__"/>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Сообщение</label>
-                            <textarea id="message" rows="3" placeholder="Ваш запрос..."></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-submit glow-effect">Отправить</button>
-                    </form>
-                    <div id="formMessage" class="form-message"></div>
-                </div>
+        <section id="features">
+            <div class="grid">
+                <div class="card reveal"><h3>🚀 Скорость</h3><p>Молниеносная загрузка и оптимизация.</p></div>
+                <div class="card reveal"><h3>💎 Дизайн</h3><p>Эффект матового стекла и градиенты.</p></div>
+                <div class="card reveal"><h3>📱 Адаптив</h3><p>Идеально на любых устройствах.</p></div>
             </div>
         </section>
-        </main>
-    </div>
-
-    <footer class="glass-card">
-        <p>&copy; 2025 ГлобалТаможня. Все права защищены.</p>
-    </footer>
-
-    <button id="backToTop" class="back-to-top">↑</button>
-    <script src="script.js" defer></script>
+        <section id="contact">
+            <div class="reveal">
+                <h2>Свяжитесь с нами</h2>
+                <form onsubmit="event.preventDefault(); alert('Отправлено!');">
+                    <input type="text" placeholder="Ваше имя" required>
+                    <input type="tel" id="phone" placeholder="+7 (___) ___-__-__" required>
+                    <textarea rows="4" placeholder="Сообщение"></textarea>
+                    <button type="submit">Отправить</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <button id="up" onclick="window.scrollTo(0,0)">↑</button>
+    <script>
+        const obs = new IntersectionObserver(e => e.forEach(el => el.target.classList.toggle('active', el.isIntersecting)));
+        document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+        window.addEventListener('scroll', () => {
+            document.getElementById('up').classList.toggle('show', window.scrollY > 500);
+            const y = window.scrollY * 0.5;
+            document.querySelector('.b1').style.transform = `translate(${y}px, ${y*0.5}px)`;
+            document.querySelector('.b2').style.transform = `translate(${-y}px, ${-y*0.5}px)`;
+        });
+        document.querySelectorAll('.card').forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const r = card.getBoundingClientRect();
+                const x = e.clientX - r.left, y = e.clientY - r.top;
+                const dx = (x - r.width/2) / 20, dy = (y - r.height/2) / 20;
+                card.style.transform = `perspective(1000px) rotateX(${-dy}deg) rotateY(${dx}deg) scale(1.02)`;
+            });
+            card.addEventListener('mouseleave', () => card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale(1)');
+        });
+        document.getElementById('phone').addEventListener('input', function(e) {
+            let v = e.target.value.replace(/\D/g, '');
+            if (v.length > 11) v = v.slice(0, 11);
+            let f = '+7';
+            if (v.length > 1) f += ' (' + v.slice(1, 4);
+            if (v.length > 4) f += ') ' + v.slice(4, 7);
+            if (v.length > 7) f += '-' + v.slice(7, 9);
+            if (v.length > 9) f += '-' + v.slice(9, 11);
+            e.target.value = f;
+        });
+    </script>
 </body>
 </html>
