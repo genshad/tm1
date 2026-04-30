@@ -3,61 +3,151 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    
-    <!-- SEO Meta Tags -->
     <title>ГлобалТаможня — Растаможка товаров в РФ</title>
-    <meta name="description" content="Профессиональная растаможка товаров в РФ. Расчёт пошлин, оформление сертификатов, экспресс-таможенное очищение от 24 часов."/>
-    <meta name="keywords" content="растаможка, таможенное оформление, импорт товаров, пошлины, НДС, сертификация, ЕАЭС, ВЭД"/>
-    <meta name="author" content="ГлобалТаможня"/>
-    <link rel="canonical" href="https://tm1.github.io/"/>
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico"/>
-    <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
-    
-    <!-- Open Graph for Social Media -->
-    <meta property="og:title" content="ГлобалТаможня — Растаможка товаров в РФ"/>
-    <meta property="og:description" content="Быстро, прозрачно, без лишних хлопот"/>
-    <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://tm1.github.io/"/>
-    <meta property="og:image" content="og-image.jpg"/>
-    <meta property="og:locale" content="ru_RU"/>
-    
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:title" content="ГлобалТаможня — Растаможка товаров в РФ"/>
-    <meta name="twitter:description" content="Быстро, прозрачно, без лишних хлопот"/>
-    
-    <!-- External Stylesheet -->
-    <link rel="stylesheet" href="styles.css"/>
-    
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript">
-        (function(m,e,t,r,i,k,a){
-            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-            m[i].l=1*new Date();
-            for(var j=0;j<navigator.mimeTypes.length;j++){if(navigator.mimeTypes[j].enabledPlugin){k=navigator.mimeTypes[j].enabledPlugin;if(k&&k.type.indexOf('application/x-shockwave-flash')!==-1){t=k;break}}}
-            if(t&&(k=t.addBehavior('#default#homePage'))){k.setHomePage(document.location.href)}
-            i='ym';k=i+'_'+(t=r.createElement(e)).id;t.src='https://mc.yandex.ru/metrika/tag.js';
-            var d=document;n=d.getElementsByTagName(e)[0];n.parentNode.insertBefore(t,n);
-        })(window,'script','0','d5e7f3g2',true);
-    </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/00000000" style="position:absolute;left:-9999px;" alt=""/></div></noscript>
-    <!-- /Yandex.Metrika counter -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f7f9fc;
+            color: #333;
+            line-height: 1.7;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            text-align: center;
+            padding: 70px 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+        }
+        header h1 {
+            font-size: 2.6em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        section {
+            background: white;
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+        h2 {
+            color: #1e3c72;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: 600;
+        }
+        ul {
+            list-style: none;
+        }
+        ul li {
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+        ul li::before {
+            content: "✓";
+            color: #27ae60;
+            font-weight: bold;
+            margin-right: 10px;
+            background: #e8f5e8;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+        }
+        .highlight {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            font-weight: 500;
+            color: #1565c0;
+            text-align: center;
+        }
+        .contact-info {
+            text-align: center;
+            font-size: 1.1em;
+        }
+        .contact-info p {
+            margin: 10px 0;
+            font-size: 1.1em;
+        }
+        .btn {
+            display: inline-block;
+            background: #1e3c72;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 6px;
+            margin: 10px 5px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #0d264d;
+        }
+        .btn-whatsapp {
+            background: #25D366;
+        }
+        .btn-whatsapp:hover {
+            background: #1da856;
+        }
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #666;
+            font-size: 0.95em;
+            margin-top: 30px;
+            border-top: 1px solid #eee;
+        }
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2.1em;
+            }
+            header p {
+                font-size: 1em;
+            }
+            .btn {
+                display: block;
+                margin: 10px auto;
+                width: 80%;
+            }
+        }
+    </style>
 </head>
 <body>
 
     <div class="container">
 
-        <header role="banner">
+        <header>
             <h1>ГлобалТаможня</h1>
             <p>Профессиональная растаможка товаров в России. Быстро, прозрачно, без лишних хлопот.</p>
         </header>
 
-        <main role="main">
-        
-        <section aria-labelledby="services-heading">
-            <h2 id="services-heading">Наши услуги</h2>
+        <section>
+            <h2>Наши услуги</h2>
             <ul>
                 <li>Растаможка импортных товаров (ЕАЭС, РФ)</li>
                 <li>Таможенное оформление для ИП и юрлиц</li>
@@ -71,8 +161,8 @@
             </div>
         </section>
 
-        <section aria-labelledby="benefits-heading">
-            <h2 id="benefits-heading">Почему клиенты выбирают нас?</h2>
+        <section>
+            <h2>Почему клиенты выбирают нас?</h2>
             <ul>
                 <li>Опыт более 10 лет на рынке логистики</li>
                 <li>Работаем с любыми категориями товаров</li>
@@ -83,26 +173,24 @@
             </ul>
         </section>
 
-        <section aria-labelledby="contacts-heading">
-            <h2 id="contacts-heading">Контакты</h2>
-            <address class="contact-info" style="font-style: normal;">
-                <p>📞 <strong>Телефон:</strong> <a href="tel:+74959876543" style="color: inherit; text-decoration: none;">+7 (495) 987-65-43</a></p>
-                <p>📧 <strong>Email:</strong> <a href="mailto:info@globaltam.ru" style="color: inherit; text-decoration: none;">info@globaltam.ru</a></p>
+        <section>
+            <h2>Контакты</h2>
+            <div class="contact-info">
+                <p>📞 <strong>Телефон:</strong> +7 (495) 987-65-43</p>
+                <p>📧 <strong>Email:</strong> info@globaltam.ru</p>
                 <p>🏢 <strong>Офис:</strong> г. Москва, Волоколамское ш., д. 98</p>
                 <p>🕒 <strong>Режим работы:</strong> Пн–Пт: 9:00–18:00</p>
                 <p>🌐 <strong>ИНН:</strong> 7712345678 | <strong>ОГРН:</strong> 1234567890123</p>
 
-                <a href="tel:+74959876543" class="btn" aria-label="Позвонить по телефону +7 495 987-65-43">Позвонить</a>
-                <a href="https://wa.me/74959876543" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" aria-label="Написать в WhatsApp">Написать в WhatsApp</a>
-                <a href="mailto:info@globaltam.ru" class="btn btn-email" aria-label="Написать на email info@globaltam.ru">Написать на email</a>
-            </address>
+                <a href="tel:+74959876543" class="btn">Позвонить</a>
+                <a href="https://wa.me/74959876543" target="_blank" class="btn btn-whatsapp">Написать в WhatsApp</a>
+                <a href="mailto:info@globaltam.ru" class="btn" style="background: #9b59b6;">Написать на email</a>
+            </div>
         </section>
-        
-        </main>
 
     </div>
 
-    <footer role="contentinfo">
+    <footer>
         &copy; 2025 ГлобалТаможня. Все права защищены.<br>
         Официальный партнёр крупных логистических операторов. Лицензия № ТМ-1123.
     </footer>
