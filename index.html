@@ -8,13 +8,19 @@
     <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
+    <!-- Animated Background -->
+    <div class="bg-gradient"></div>
+    <div class="bg-blob blob-1"></div>
+    <div class="bg-blob blob-2"></div>
+    <div class="bg-blob blob-3"></div>
+
     <div class="container">
-        <header>
+        <header class="glass-card fade-in">
             <h1>ГлобалТаможня</h1>
             <p>Профессиональная растаможка товаров в России. Быстро, прозрачно, без лишних хлопот.</p>
         </header>
 
-        <nav>
+        <nav class="glass-card fade-in">
             <ul class="nav-menu">
                 <li><a href="#services">Услуги</a></li>
                 <li><a href="#benefits">Преимущества</a></li>
@@ -23,68 +29,102 @@
         </nav>
 
         <main>
-        <section id="services">
+        <section id="services" class="glass-card reveal">
             <h2>Наши услуги</h2>
-            <ul>
-                <li>Растаможка импортных товаров (ЕАЭС, РФ)</li>
-                <li>Таможенное оформление для ИП и юрлиц</li>
-                <li>Расчёт пошлин, НДС, акцизов</li>
-                <li>Оформление сертификатов и деклараций</li>
-                <li>Сопровождение на всех этапах</li>
-                <li>Экспресс-оформление — от 24 часов</li>
+            <ul class="service-list">
+                <li class="service-item">Растаможка импортных товаров (ЕАЭС, РФ)</li>
+                <li class="service-item">Таможенное оформление для ИП и юрлиц</li>
+                <li class="service-item">Расчёт пошлин, НДС, акцизов</li>
+                <li class="service-item">Оформление сертификатов и деклараций</li>
+                <li class="service-item">Сопровождение на всех этапах</li>
+                <li class="service-item highlight-item">🎁 Экспресс-оформление — от 24 часов</li>
             </ul>
-            <div class="highlight">🎁 Консультация бесплатно! Экономия до 30% на платежах.</div>
+            <div class="highlight-badge">Консультация бесплатно! Экономия до 30%</div>
         </section>
 
-        <section id="benefits">
+        <section id="benefits" class="glass-card reveal">
             <h2>Почему выбирают нас?</h2>
-            <ul>
-                <li>Опыт более 10 лет</li>
-                <li>Работаем с любыми категориями товаров</li>
-                <li>Прозрачная калькуляция стоимости</li>
-                <li>Официальное оформление</li>
-                <li>Поддержка 24/7</li>
-            </ul>
+            <div class="benefits-grid">
+                <div class="benefit-card tilt-card">
+                    <span class="benefit-icon">🏆</span>
+                    <h3>10+ лет</h3>
+                    <p>Опыт работы</p>
+                </div>
+                <div class="benefit-card tilt-card">
+                    <span class="benefit-icon">📦</span>
+                    <h3>Все категории</h3>
+                    <p>Любые товары</p>
+                </div>
+                <div class="benefit-card tilt-card">
+                    <span class="benefit-icon">💎</span>
+                    <h3>Прозрачно</h3>
+                    <p>Без скрытых платежей</p>
+                </div>
+                <div class="benefit-card tilt-card">
+                    <span class="benefit-icon">📄</span>
+                    <h3>Официально</h3>
+                    <p>Полный пакет документов</p>
+                </div>
+                <div class="benefit-card tilt-card">
+                    <span class="benefit-icon">🕐</span>
+                    <h3>24/7</h3>
+                    <p>Поддержка клиентов</p>
+                </div>
+            </div>
         </section>
 
-        <section id="contacts">
+        <section id="contacts" class="glass-card reveal">
             <h2>Контакты</h2>
-            <address class="contact-info">
-                <p>📞 <a href="tel:+74959876543">+7 (495) 987-65-43</a></p>
-                <p>📧 <a href="mailto:info@globaltam.ru">info@globaltam.ru</a></p>
-                <p>🏢 г. Москва, Волоколамское ш., д. 98</p>
-                <p>🕒 Пн–Пт: 9:00–18:00</p>
-                <div class="btn-container">
-                    <a href="tel:+74959876543" class="btn">📞 Позвонить</a>
-                    <a href="https://wa.me/74959876543" target="_blank" class="btn btn-whatsapp">💬 WhatsApp</a>
-                    <a href="mailto:info@globaltam.ru" class="btn btn-email">✉️ Email</a>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-icon">📞</span>
+                        <a href="tel:+74959876543">+7 (495) 987-65-43</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📧</span>
+                        <a href="mailto:info@globaltam.ru">info@globaltam.ru</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">🏢</span>
+                        <span>г. Москва, Волоколамское ш., д. 98</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">🕒</span>
+                        <span>Пн–Пт: 9:00–18:00</span>
+                    </div>
+                    <div class="btn-container">
+                        <a href="tel:+74959876543" class="btn btn-primary pulse">📞 Позвонить</a>
+                        <a href="https://wa.me/74959876543" target="_blank" class="btn btn-whatsapp pulse">💬 WhatsApp</a>
+                        <a href="mailto:info@globaltam.ru" class="btn btn-email pulse">✉️ Email</a>
+                    </div>
                 </div>
-            </address>
-            
-            <div class="contact-form-wrapper">
-                <h3>Заказать обратный звонок</h3>
-                <form id="contactForm" novalidate>
-                    <div class="form-group">
-                        <label for="name">Имя</label>
-                        <input type="text" id="name" required placeholder="Иван Иванов"/>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Телефон</label>
-                        <input type="tel" id="phone" required placeholder="+7 (___) ___-__-__"/>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Сообщение</label>
-                        <textarea id="message" rows="3" placeholder="Ваш запрос..."></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-submit">Отправить</button>
-                </form>
-                <div id="formMessage" class="form-message"></div>
+                
+                <div class="contact-form-wrapper">
+                    <h3>Заказать обратный звонок</h3>
+                    <form id="contactForm" novalidate>
+                        <div class="form-group">
+                            <label for="name">Имя</label>
+                            <input type="text" id="name" required placeholder="Иван Иванов"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Телефон</label>
+                            <input type="tel" id="phone" required placeholder="+7 (___) ___-__-__"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Сообщение</label>
+                            <textarea id="message" rows="3" placeholder="Ваш запрос..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-submit glow-effect">Отправить</button>
+                    </form>
+                    <div id="formMessage" class="form-message"></div>
+                </div>
             </div>
         </section>
         </main>
     </div>
 
-    <footer>
+    <footer class="glass-card">
         <p>&copy; 2025 ГлобалТаможня. Все права защищены.</p>
     </footer>
 

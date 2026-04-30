@@ -1,5 +1,5 @@
 /**
- * GlobalTaможня - Compact JS
+ * GlobalTaможня - Modern Glass & Flow
  */
 document.addEventListener('DOMContentLoaded', function() {
     // Back to Top
@@ -105,20 +105,49 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Fade-in Animation
-    const observer = new IntersectionObserver(entries => {
+    // Scroll Reveal Animation
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+                entry.target.classList.add('active');
             }
         });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-    sections.forEach(section => {
-        section.style.opacity = '0';
-        section.style.transform = 'translateY(20px)';
-        section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(section);
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    // Tilt Effect for Cards
+    const tiltCards = document.querySelectorAll('.tilt-card');
+    tiltCards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            const rotateX = (y - centerY) / 10;
+            const rotateY = (centerX - x) / 10;
+            
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
+        });
+    });
+
+    // Parallax effect for blobs
+    const blobs = document.querySelectorAll('.bg-blob');
+    window.addEventListener('mousemove', (e) => {
+        const mouseX = e.clientX / window.innerWidth;
+        const mouseY = e.clientY / window.innerHeight;
+        
+        blobs.forEach((blob, index) => {
+            const speed = (index + 1) * 20;
+            const x = mouseX * speed;
+            const y = mouseY * speed;
+            blob.style.transform = `translate(${x}px, ${y}px)`;
+        });
     });
 });
